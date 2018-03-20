@@ -1,0 +1,16 @@
+<div class="container-fluid div-content">
+    <div class="card mx-auto">
+        <div class="card-body">
+            <h5 class="card-title">Depósito</h5>
+            <form name="frmDp">
+                <p>
+                    <input class="form-control" type="text" name="vlrDeposito" placeholder="Digite o valor" ng-model="vlrDeposito" required>
+                    <span ng-show="frmDp.vlrDeposito.$touched && frmDp.vlrDeposito.$invalid" class="text-danger">Por favor, informe um valor.</span>
+                </p>
+                <button ng-disabled="frmDp.vlrDeposito.$pristine || (frmDp.vlrDeposito.$touched && frmDp.vlrDeposito.$invalid)" type="button" class="btn btn-outline-success" ng-click="depositar()">Depositar</button>
+                <a class="btn btn-outline-success" href="#/home">Voltar</a>
+            </form>
+            <p>{{mensagem}}</p>
+        </div>
+    </div>
+</div>

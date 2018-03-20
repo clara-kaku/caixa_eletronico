@@ -1,0 +1,16 @@
+<div class="container-fluid div-content">
+    <div class="card mx-auto">
+        <div class="card-body">
+            <h5 class="card-title">Saque</h5>
+            <form name="frmSq">
+                <p class="card-text">
+                    <input class="form-control" type="text" name="vlrSaque" placeholder="Digite o valor" ng-model="vlrSaque" required>
+                    <span ng-show="frmSq.vlrSaque.$touched && frmSq.vlrSaque.$invalid" class="text-danger">Por favor, informe um valor.</span>
+                </p>
+                <button ng-disabled="frmSq.vlrSaque.$pristine || (frmSq.vlrSaque.$touched && frmSq.vlrSaque.$invalid)" type="button" class="btn btn-outline-danger" ng-click="sacar()">Sacar</button>
+                <a class="btn btn-outline-danger" href="#/home">Voltar</a>
+            </form>
+            <p>{{resultado}}</p>
+        </div>
+      </div>
+</div>
